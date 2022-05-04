@@ -19,7 +19,6 @@ jwt.verify(token, process.env.ACCESS_TOKEN,(err,decoded) => {
     if(err){
         res.status(403).send({ message:'Forbidden access'})
     }else{
-        // console.log(decoded);
         req.decoded = decoded;
         
         next()
