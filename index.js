@@ -51,8 +51,8 @@ const run = async () => {
         app.get('/my-items',jwtVerify, async (req, res) => {
             const email = req.query.email;
             const decodedEmail = req.decoded
-            console.log(decodedEmail)
-            console.log(email)
+            // console.log(decodedEmail)
+            // console.log(email)
             const query = {email:email};
            
             
