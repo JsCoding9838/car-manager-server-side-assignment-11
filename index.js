@@ -115,7 +115,7 @@ const run = async () => {
             const matched = result.filter(inventory => inventory.title.toLowerCase().includes(query));
             res.send(matched)
 
-
+            
 
         })
         //update item quantity add and delete
@@ -125,7 +125,7 @@ const run = async () => {
             const query = { _id: ObjectId(id) }
             let result = await inventoryCollection.findOne(query);
             const options = { upsert: true };
-            //---------------------------------------------------//
+            //------------------------------------//
             const add = parseInt(req.query.add)
             const deleted = parseInt(req.query.deleted)
             const addQuantity = parseInt(result.quantity) + add;
