@@ -174,9 +174,9 @@ const run = async () => {
 run().catch(console.dir)
 
 app.get('/', (req, res) => {
-    res.send('hellow world')
+    res.send('Warehouse inventory server is Running')
 })
 
 app.listen(port, () => {
-    console.log('my server running')
+    console.log(`my server running, ${port}`)
 })
